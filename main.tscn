@@ -48,8 +48,8 @@ animations = [{
 script = ExtResource("1_2qhcq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(180, 127)
-scale = Vector2(3, 3)
+position = Vector2(599, 499)
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_ksjup")
 animation = &"left"
 
