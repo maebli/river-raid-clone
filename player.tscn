@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1vuu4jx7t3h0"]
+
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_0npls"]
+[ext_resource type="Texture2D" uid="uid://doxebiwojil4g" path="res://assets/Atari - River Raid Atari 2600 - River Raid.png" id="2_0kocq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3sk0"]
+atlas = ExtResource("2_0kocq")
+region = Rect2(26, 16, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8ai8"]
+atlas = ExtResource("2_0kocq")
+region = Rect2(12, 16, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmbne"]
+atlas = ExtResource("2_0kocq")
+region = Rect2(40, 16, 14, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ksjup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3sk0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8ai8")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmbne")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[node name="Player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_0npls")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_ksjup")
+animation = &"left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]

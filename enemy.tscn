@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://clnpc4gpfg2jv"]
+
+[ext_resource type="Texture2D" uid="uid://b0rqyr7k2ytaq" path="res://assets/enemy.png" id="1_530o8"]
+[ext_resource type="Script" path="res://enemy.gd" id="1_g83c7"]
+
+[node name="Enemy" type="RigidBody2D"]
+script = ExtResource("1_g83c7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_530o8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
