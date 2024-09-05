@@ -4,6 +4,8 @@ extends CharacterBody2D
 
 func _process(_delta):
 	if Input.is_action_pressed("ui_right"):
-		_animated_sprite.play("run")
+		_animated_sprite.play("right")
+	elif Input.is_action_pressed("ui_left"):
+		_animated_sprite.play("left")
 	else:
-		_animated_sprite.stop()
+		_animated_sprite.play("default")
