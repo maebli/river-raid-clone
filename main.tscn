@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://gx7xtcr2ihfa"]
+[gd_scene load_steps=4 format=3 uid="uid://gx7xtcr2ihfa"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_0uadt"]
+[ext_resource type="PackedScene" uid="uid://b1vuu4jx7t3h0" path="res://player.tscn" id="2_2y6ax"]
+[ext_resource type="PackedScene" uid="uid://clnpc4gpfg2jv" path="res://enemy.tscn" id="3_ytffe"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_0uadt")
@@ -12,3 +14,7 @@ script = ExtResource("1_0uadt")
 [node name="StartTimer" type="Timer" parent="."]
 
 [node name="StartPosition" type="Marker2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("2_2y6ax")]
+
+[node name="Enemy" parent="." instance=ExtResource("3_ytffe")]

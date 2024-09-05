@@ -16,7 +16,5 @@ func game_over():
 
 func new_game():
 	score = 0
-	$Player.start($StartPosition.position)
-	$Enemy.start($StartPosition.position)
 	$StartTimer.start()
 	
