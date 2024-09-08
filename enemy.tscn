@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://enemy.gd" id="1_g83c7"]
 
 [node name="Enemy" type="RigidBody2D"]
+mass = 20.0
 script = ExtResource("1_g83c7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
